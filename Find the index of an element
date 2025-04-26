@@ -1,0 +1,33 @@
+Find the index of an element
+Question:
+Given an array and a number, return the index of the number in the array. If it’s not found, return -1.
+
+Test Cases:
+
+Input: [10, 20, 30, 40], 30 → Output: 2
+
+Input: [5, 6, 7], 8 → Output: -1
+
+Input: [], 1 → Output: -1
+
+
+#include <iostream>
+using namespace std;
+int main() 
+{
+    int arr[]={10, 20, 30, 40};
+    int val;
+    cin>>val;
+    int n=sizeof(arr)/sizeof(arr[0]);
+    bool found=false;
+    for(int i=0;i<n;i++){ 
+      if(arr[i]==val){
+        cout<<i;
+        found=true;
+      }
+    }
+    if(!found){
+      cout<<-1;
+    }
+    return 0;
+}
